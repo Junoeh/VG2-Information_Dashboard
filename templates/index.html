@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Home</h2>
+
+{% if session.get('user_id') %}
+<p>Belkommen {{ session.get('email') }}</p>
+{% else %}
+<p><a href="/login">Login</a></p>
+{% endif %}
+
+{% endblock %}
